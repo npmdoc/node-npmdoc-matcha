@@ -1,0 +1,1121 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/logicalparadox/matcha#readme">matcha (v0.7.0)</a>
+</h1>
+<h4>Benchmark your code.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.matcha">module matcha</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.matcha.Bench">
+            function <span class="apidocSignatureSpan">matcha.</span>Bench
+            <span class="apidocSignatureSpan">(title, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.matcha.Runner">
+            function <span class="apidocSignatureSpan">matcha.</span>Runner
+            <span class="apidocSignatureSpan">(suite)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.matcha.Suite">
+            function <span class="apidocSignatureSpan">matcha.</span>Suite
+            <span class="apidocSignatureSpan">(title)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">matcha.</span>Bench.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">matcha.</span>Runner.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">matcha.</span>Suite.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">matcha.</span>utils</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">matcha.</span>utils.cursor</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">matcha.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.matcha.Bench">module matcha.Bench</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.matcha.Bench.Bench">
+            function <span class="apidocSignatureSpan">matcha.</span>Bench
+            <span class="apidocSignatureSpan">(title, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.matcha.Bench.super_">
+            function <span class="apidocSignatureSpan">matcha.Bench.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.matcha.Bench.prototype">module matcha.Bench.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.matcha.Bench.prototype.run">
+            function <span class="apidocSignatureSpan">matcha.Bench.prototype.</span>run
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.matcha.Runner">module matcha.Runner</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.matcha.Runner.Runner">
+            function <span class="apidocSignatureSpan">matcha.</span>Runner
+            <span class="apidocSignatureSpan">(suite)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.matcha.Runner.super_">
+            function <span class="apidocSignatureSpan">matcha.Runner.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.matcha.Runner.prototype">module matcha.Runner.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.matcha.Runner.prototype.run">
+            function <span class="apidocSignatureSpan">matcha.Runner.prototype.</span>run
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.matcha.Runner.prototype.runAfter">
+            function <span class="apidocSignatureSpan">matcha.Runner.prototype.</span>runAfter
+            <span class="apidocSignatureSpan">(done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.matcha.Runner.prototype.runBefore">
+            function <span class="apidocSignatureSpan">matcha.Runner.prototype.</span>runBefore
+            <span class="apidocSignatureSpan">(done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.matcha.Runner.prototype.runBenches">
+            function <span class="apidocSignatureSpan">matcha.Runner.prototype.</span>runBenches
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.matcha.Runner.prototype.runSuites">
+            function <span class="apidocSignatureSpan">matcha.Runner.prototype.</span>runSuites
+            <span class="apidocSignatureSpan">(done)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.matcha.Suite">module matcha.Suite</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.matcha.Suite.Suite">
+            function <span class="apidocSignatureSpan">matcha.</span>Suite
+            <span class="apidocSignatureSpan">(title)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.matcha.Suite.create">
+            function <span class="apidocSignatureSpan">matcha.Suite.</span>create
+            <span class="apidocSignatureSpan">(parent, title)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.matcha.Suite.super_">
+            function <span class="apidocSignatureSpan">matcha.Suite.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.matcha.Suite.prototype">module matcha.Suite.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.matcha.Suite.prototype.addAfter">
+            function <span class="apidocSignatureSpan">matcha.Suite.prototype.</span>addAfter
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.matcha.Suite.prototype.addBefore">
+            function <span class="apidocSignatureSpan">matcha.Suite.prototype.</span>addBefore
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.matcha.Suite.prototype.addBench">
+            function <span class="apidocSignatureSpan">matcha.Suite.prototype.</span>addBench
+            <span class="apidocSignatureSpan">(bench)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.matcha.Suite.prototype.addSuite">
+            function <span class="apidocSignatureSpan">matcha.Suite.prototype.</span>addSuite
+            <span class="apidocSignatureSpan">(suite)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.matcha.Suite.prototype.setOption">
+            function <span class="apidocSignatureSpan">matcha.Suite.prototype.</span>setOption
+            <span class="apidocSignatureSpan">(key, value)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.matcha.utils">module matcha.utils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.matcha.utils.color">
+            function <span class="apidocSignatureSpan">matcha.utils.</span>color
+            <span class="apidocSignatureSpan">(str, color)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.matcha.utils.highlight">
+            function <span class="apidocSignatureSpan">matcha.utils.</span>highlight
+            <span class="apidocSignatureSpan">(str, color)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.matcha.utils.humanize">
+            function <span class="apidocSignatureSpan">matcha.utils.</span>humanize
+            <span class="apidocSignatureSpan">(n)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.matcha.utils.padAfter">
+            function <span class="apidocSignatureSpan">matcha.utils.</span>padAfter
+            <span class="apidocSignatureSpan">(str, width)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.matcha.utils.padBefore">
+            function <span class="apidocSignatureSpan">matcha.utils.</span>padBefore
+            <span class="apidocSignatureSpan">(str, width)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.matcha.utils.series">
+            function <span class="apidocSignatureSpan">matcha.utils.</span>series
+            <span class="apidocSignatureSpan">(arr, delay, iterator, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">matcha.utils.</span>cursor</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.matcha.utils.cursor">module matcha.utils.cursor</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.matcha.utils.cursor.CR">
+            function <span class="apidocSignatureSpan">matcha.utils.cursor.</span>CR
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.matcha.utils.cursor.beginningOfLine">
+            function <span class="apidocSignatureSpan">matcha.utils.cursor.</span>beginningOfLine
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.matcha.utils.cursor.deleteLine">
+            function <span class="apidocSignatureSpan">matcha.utils.cursor.</span>deleteLine
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.matcha.utils.cursor.hide">
+            function <span class="apidocSignatureSpan">matcha.utils.cursor.</span>hide
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.matcha.utils.cursor.show">
+            function <span class="apidocSignatureSpan">matcha.utils.cursor.</span>show
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.matcha" id="apidoc.module.matcha">module matcha</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.matcha.Bench" id="apidoc.element.matcha.Bench">
+        function <span class="apidocSignatureSpan">matcha.</span>Bench
+        <span class="apidocSignatureSpan">(title, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Bench(title, fn) {
+  EventEmitter.call(this);
+  this.title = title;
+  this.fn = fn;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.matcha.Runner" id="apidoc.element.matcha.Runner">
+        function <span class="apidocSignatureSpan">matcha.</span>Runner
+        <span class="apidocSignatureSpan">(suite)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Runner(suite) {
+  this.suite = suite;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.matcha.Suite" id="apidoc.element.matcha.Suite">
+        function <span class="apidocSignatureSpan">matcha.</span>Suite
+        <span class="apidocSignatureSpan">(title)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Suite(title) {
+  this.title = title || '';
+  this.benches = [];
+  this.suites = [];
+  this.before = [];
+  this.after = [];
+  this.options = {
+      type: 'adaptive'
+    , iterations: 100
+    , concurrency: 1
+    , mintime: 500
+    , delay: 100
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.matcha.Bench" id="apidoc.module.matcha.Bench">module matcha.Bench</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.matcha.Bench.Bench" id="apidoc.element.matcha.Bench.Bench">
+        function <span class="apidocSignatureSpan">matcha.</span>Bench
+        <span class="apidocSignatureSpan">(title, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Bench(title, fn) {
+  EventEmitter.call(this);
+  this.title = title;
+  this.fn = fn;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.matcha.Bench.super_" id="apidoc.element.matcha.Bench.super_">
+        function <span class="apidocSignatureSpan">matcha.Bench.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.matcha.Bench.prototype" id="apidoc.module.matcha.Bench.prototype">module matcha.Bench.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.matcha.Bench.prototype.run" id="apidoc.element.matcha.Bench.prototype.run">
+        function <span class="apidocSignatureSpan">matcha.Bench.prototype.</span>run
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">run = function (cb) {
+  var self = this
+    , opts = this.parent.options
+    , runner = opts.type === 'static'
+      ? runStatic
+      : runAdaptive
+
+  cb = cb || function () {};
+
+  function report (total, elapsed) {
+    var stats = {
+        iterations: total
+      , elapsed: elapsed
+      , title: self.title
+      , ops: Math.round(total / elapsed * 1000)
+    };
+    self.stats = stats;
+    self.emit('end', stats);
+    cb(stats);
+  }
+
+  runner.call(this, report);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.matcha.Runner" id="apidoc.module.matcha.Runner">module matcha.Runner</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.matcha.Runner.Runner" id="apidoc.element.matcha.Runner.Runner">
+        function <span class="apidocSignatureSpan">matcha.</span>Runner
+        <span class="apidocSignatureSpan">(suite)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Runner(suite) {
+  this.suite = suite;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.matcha.Runner.super_" id="apidoc.element.matcha.Runner.super_">
+        function <span class="apidocSignatureSpan">matcha.Runner.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.matcha.Runner.prototype" id="apidoc.module.matcha.Runner.prototype">module matcha.Runner.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.matcha.Runner.prototype.run" id="apidoc.element.matcha.Runner.prototype.run">
+        function <span class="apidocSignatureSpan">matcha.Runner.prototype.</span>run
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">run = function (cb) {
+  var self = this;
+
+  var stats = this.stats = { suites: 0, benches: 0 };
+
+
+  function iterator (fn, next) {
+    fn(next);
+  }
+
+  this.on('bench start', function() {
+    stats.benches++;
+  });
+
+  function done (err) {
+    if (err) throw err;
+    stats.elapsed = self.timer.stop().elapsed;
+    self.emit('end', stats);
+    cb()
+  }
+
+  this.timer = new Timer().start();
+  this.emit('start');
+
+  series([
+      this.runBefore.bind(this)
+    , this.runBenches.bind(this)
+    , this.runSuites.bind(this)
+    , this.runAfter.bind(this)
+  ], iterator, done);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.matcha.Runner.prototype.runAfter" id="apidoc.element.matcha.Runner.prototype.runAfter">
+        function <span class="apidocSignatureSpan">matcha.Runner.prototype.</span>runAfter
+        <span class="apidocSignatureSpan">(done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">runAfter = function (done) {
+  runHooks.call(this, this.suite.after, done);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.matcha.Runner.prototype.runBefore" id="apidoc.element.matcha.Runner.prototype.runBefore">
+        function <span class="apidocSignatureSpan">matcha.Runner.prototype.</span>runBefore
+        <span class="apidocSignatureSpan">(done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">runBefore = function (done) {
+  runHooks.call(this, this.suite.before, done);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.matcha.Runner.prototype.runBenches" id="apidoc.element.matcha.Runner.prototype.runBenches">
+        function <span class="apidocSignatureSpan">matcha.Runner.prototype.</span>runBenches
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">runBenches = function (cb) {
+  var self = this
+    , suite = this.suite
+    , stats = []
+    , delay = suite.options.delay;
+
+  series(suite.benches, delay, function (bench, next) {
+    self.emit('bench start', bench);
+    bench.run(function (res) {
+      stats.push(res);
+      self.emit('bench end', res);
+      next();
+    });
+  }, function () {
+    self.emit('suite results', stats);
+    cb();
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.matcha.Runner.prototype.runSuites" id="apidoc.element.matcha.Runner.prototype.runSuites">
+        function <span class="apidocSignatureSpan">matcha.Runner.prototype.</span>runSuites
+        <span class="apidocSignatureSpan">(done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">runSuites = function (done) {
+  var self = this
+    , suite = this.suite
+    , delay = suite.options.delay;
+
+  series(suite.suites, delay, function (suite, next) {
+    var runner = new Runner(suite);
+    proxy(runner, self, 'suite start');
+    proxy(runner, self, 'suite end');
+    proxy(runner, self, 'suite results');
+    proxy(runner, self, 'bench start');
+    proxy(runner, self, 'bench end');
+    self.emit('suite start', suite);
+    runner.run(function () {
+      self.stats.suites++;
+      self.emit('suite end', suite);
+      next();
+    });
+  }, done);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.matcha.Suite" id="apidoc.module.matcha.Suite">module matcha.Suite</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.matcha.Suite.Suite" id="apidoc.element.matcha.Suite.Suite">
+        function <span class="apidocSignatureSpan">matcha.</span>Suite
+        <span class="apidocSignatureSpan">(title)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Suite(title) {
+  this.title = title || '';
+  this.benches = [];
+  this.suites = [];
+  this.before = [];
+  this.after = [];
+  this.options = {
+      type: 'adaptive'
+    , iterations: 100
+    , concurrency: 1
+    , mintime: 500
+    , delay: 100
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.matcha.Suite.create" id="apidoc.element.matcha.Suite.create">
+        function <span class="apidocSignatureSpan">matcha.Suite.</span>create
+        <span class="apidocSignatureSpan">(parent, title)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (parent, title) {
+  var suite = new Suite(title);
+  parent.addSuite(suite);
+  return suite;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.matcha.Suite.super_" id="apidoc.element.matcha.Suite.super_">
+        function <span class="apidocSignatureSpan">matcha.Suite.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.matcha.Suite.prototype" id="apidoc.module.matcha.Suite.prototype">module matcha.Suite.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.matcha.Suite.prototype.addAfter" id="apidoc.element.matcha.Suite.prototype.addAfter">
+        function <span class="apidocSignatureSpan">matcha.Suite.prototype.</span>addAfter
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addAfter = function (fn) {
+  this.after.push(fn);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.matcha.Suite.prototype.addBefore" id="apidoc.element.matcha.Suite.prototype.addBefore">
+        function <span class="apidocSignatureSpan">matcha.Suite.prototype.</span>addBefore
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addBefore = function (fn) {
+  this.before.push(fn);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.matcha.Suite.prototype.addBench" id="apidoc.element.matcha.Suite.prototype.addBench">
+        function <span class="apidocSignatureSpan">matcha.Suite.prototype.</span>addBench
+        <span class="apidocSignatureSpan">(bench)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addBench = function (bench) {
+  bench.parent = this;
+  this.benches.push(bench);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.matcha.Suite.prototype.addSuite" id="apidoc.element.matcha.Suite.prototype.addSuite">
+        function <span class="apidocSignatureSpan">matcha.Suite.prototype.</span>addSuite
+        <span class="apidocSignatureSpan">(suite)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addSuite = function (suite) {
+  suite.parent = this;
+  this.suites.push(suite);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.matcha.Suite.prototype.setOption" id="apidoc.element.matcha.Suite.prototype.setOption">
+        function <span class="apidocSignatureSpan">matcha.Suite.prototype.</span>setOption
+        <span class="apidocSignatureSpan">(key, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setOption = function (key, value) {
+  this.options[key] = value;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.matcha.utils" id="apidoc.module.matcha.utils">module matcha.utils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.matcha.utils.color" id="apidoc.element.matcha.utils.color">
+        function <span class="apidocSignatureSpan">matcha.utils.</span>color
+        <span class="apidocSignatureSpan">(str, color)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">color = function (str, color) {
+  var options = {
+      red:      '\u001b[31m'
+    , green:    '\u001b[32m'
+    , yellow:   '\u001b[33m'
+    , blue:     '\u001b[34m'
+    , magenta:  '\u001b[35m'
+    , cyan:     '\u001b[36m'
+    , gray:     '\u001b[90m'
+    , reset:    '\u001b[0m'
+  };
+  return options[color] + str + options.reset;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.matcha.utils.highlight" id="apidoc.element.matcha.utils.highlight">
+        function <span class="apidocSignatureSpan">matcha.utils.</span>highlight
+        <span class="apidocSignatureSpan">(str, color)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">highlight = function (str, color) {
+  var options = {
+      red:      '\u001b[41m'
+    , green:    '\u001b[42m'
+    , yellow:   '\u001b[43m'
+    , blue:     '\u001b[44m'
+    , magenta:  '\u001b[45m'
+    , cyan:     '\u001b[46m'
+    , gray:     '\u001b[100m'
+    , reset:    '\u001b[0m'
+  };
+  return options[color] + str + options.reset;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.matcha.utils.humanize" id="apidoc.element.matcha.utils.humanize">
+        function <span class="apidocSignatureSpan">matcha.utils.</span>humanize
+        <span class="apidocSignatureSpan">(n)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">humanize = function (n) {
+  var n = String(n).split('.')
+  n[0] = n[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,');
+  return n.join('.')
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.matcha.utils.padAfter" id="apidoc.element.matcha.utils.padAfter">
+        function <span class="apidocSignatureSpan">matcha.utils.</span>padAfter
+        <span class="apidocSignatureSpan">(str, width)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">padAfter = function (str, width) {
+  return str + Array(width - str.length).join(' ');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.matcha.utils.padBefore" id="apidoc.element.matcha.utils.padBefore">
+        function <span class="apidocSignatureSpan">matcha.utils.</span>padBefore
+        <span class="apidocSignatureSpan">(str, width)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">padBefore = function (str, width) {
+  return Array(width - str.length).join(' ') + str;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.matcha.utils.series" id="apidoc.element.matcha.utils.series">
+        function <span class="apidocSignatureSpan">matcha.utils.</span>series
+        <span class="apidocSignatureSpan">(arr, delay, iterator, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">series = function (arr, delay, iterator, done) {
+  if ('function' == typeof delay) {
+    done = iterator;
+    iterator = delay;
+    delay = 0;
+  }
+
+  done = done || function () {};
+
+  function iterate (i) {
+    var fn = arr[i];
+    if (!fn) return done();
+    iterator(fn, function cb(err) {
+      if (err) return done(err);
+      if (!delay) return iterate(++i);
+      setTimeout(function () {
+        iterate(++i);
+      }, delay);
+    });
+  };
+
+  iterate(0);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.matcha.utils.cursor" id="apidoc.module.matcha.utils.cursor">module matcha.utils.cursor</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.matcha.utils.cursor.CR" id="apidoc.element.matcha.utils.cursor.CR">
+        function <span class="apidocSignatureSpan">matcha.utils.cursor.</span>CR
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">CR = function () {
+  exports.cursor.deleteLine();
+  exports.cursor.beginningOfLine();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.matcha.utils.cursor.beginningOfLine" id="apidoc.element.matcha.utils.cursor.beginningOfLine">
+        function <span class="apidocSignatureSpan">matcha.utils.cursor.</span>beginningOfLine
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">beginningOfLine = function () {
+  process.stdout.write('\033[0G');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.matcha.utils.cursor.deleteLine" id="apidoc.element.matcha.utils.cursor.deleteLine">
+        function <span class="apidocSignatureSpan">matcha.utils.cursor.</span>deleteLine
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">deleteLine = function () {
+  process.stdout.write('\033[2K');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.matcha.utils.cursor.hide" id="apidoc.element.matcha.utils.cursor.hide">
+        function <span class="apidocSignatureSpan">matcha.utils.cursor.</span>hide
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hide = function () {
+  process.stdout.write('\033[?25l');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.matcha.utils.cursor.show" id="apidoc.element.matcha.utils.cursor.show">
+        function <span class="apidocSignatureSpan">matcha.utils.cursor.</span>show
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">show = function () {
+  process.stdout.write('\033[?25h');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
